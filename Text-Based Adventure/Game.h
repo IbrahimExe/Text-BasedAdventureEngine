@@ -3,12 +3,12 @@
 #include "Player.h"
 #include <string>
 
-class Game 
+class RagebaitGame 
 {
 private:
     Player player;
 
-    // Narrative & Events
+    // narrative/ events
     void prologue();
     void ragebaitTrap();
     void epilogue();
@@ -17,6 +17,6 @@ private:
     bool battle(std::string enemyName, int enemyHealth, int enemyDamage, std::string taunt);
 
 public:
-    // Main entry point to run the game
+    // entry point to run the game
     void start();
 };

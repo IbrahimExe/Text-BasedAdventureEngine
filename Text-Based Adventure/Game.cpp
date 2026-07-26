@@ -1,12 +1,12 @@
 ﻿#include "Game.h"
 #include <iostream>
 
-void Game::start() 
+void RagebaitGame::start() 
 {
     prologue();
 
     std::cout << "\n--- TUTORIAL STAGE ---\n";
-    if (!battle("Gustavo", 40, 5, "Howdy, buddy! Prepare for some mild criticism!")) 
+    if (!battle("Gustavo", 40, 5, "Howdy, buddy! Prepare to talk about Destiny 2!")) 
     {
         return; // Player died, end game
     }
@@ -16,7 +16,7 @@ void Game::start()
 
 
     std::cout << "\n--- STAGE 2 ---\n";
-    if (!battle("Salmon", 80, 15, "I'm the fastest yapper in the West, guy!")) 
+    if (!battle("Salmon", 80, 15, "I'm the fastest yapper in the West, guey!")) 
     {
         return;
     }
@@ -36,21 +36,22 @@ void Game::start()
     epilogue(); // Win condition met
 }
 
-void Game::prologue() 
+void RagebaitGame::prologue()
 {
     std::cout << "=========================================\n";
     std::cout << "      RAGEBAIT: RAGE OF THE WEST   \n";
     std::cout << "=========================================\n";
-    std::cout << "You walk into the saloon of a dusty Vancouver LaSalle classroom.\n";
+    std::cout << "You walk into a dusty LaSalle classroom.\n";
     std::cout << "Your goal: Defeat the schools biggest trolls using only your words.\n";
     std::cout << "Manage your Health, Eloquence, and Rage.\n";
 }
 
-void Game::ragebaitTrap() 
+void RagebaitGame::ragebaitTrap()
 {
-    std::cout << "\n[EVENT: DYNAMIC TRAP!]\n";
+    std::cout << "\n[EVENT: RAGEBAITED!]\n";
     std::cout << "As you walk to the next Classroom, you spot a sign that says:\n";
-    std::cout << "\"C++ is just a worse version of Java.\"\n";
+    //std::cout << "\"C++ is just a worse version of Java.\"\n";    
+    std::cout << "\"Unreal is the best engine for making games, way better than GameMaker!\"\n";
     std::cout << "It's pure RAGEBAIT! You get unreasonably angry, popping a blood vessel.\n";
 
     player.takeDamage(20);
@@ -59,7 +60,7 @@ void Game::ragebaitTrap()
     std::cout << "You lose 20 HP but gain 15 Rage!\n";
 }
 
-void Game::epilogue() 
+void RagebaitGame::epilogue()
 {
     std::cout << "\n=========================================\n";
     std::cout << "              VICTORY!                   \n";
@@ -68,7 +69,7 @@ void Game::epilogue()
     std::cout << "You are the most eloquent yapper in the West. Thanks for playing!\n";
 }
 
-bool Game::battle(std::string enemyName, int enemyHealth, int enemyDamage, std::string taunt) 
+bool RagebaitGame::battle(std::string enemyName, int enemyHealth, int enemyDamage, std::string taunt)
 {
     std::cout << "\n" << enemyName << " steps up! \"" << taunt << "\"\n";
 

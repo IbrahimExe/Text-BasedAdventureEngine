@@ -1,23 +1,21 @@
 #include <iostream>
 #include <map>
+#include "Game.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // instantiate game engine
+    RagebaitGame ragebaitTheGame;
+
+    // start gameloop
+    ragebaitTheGame.start();
+
+    std::cout << "\nPress Enter to exit (Ik ironic)...";
+    std::cin.ignore(); // wait for user input before closing
+    std::cin.get(); // 
+
+    return 0;
 }
-
-class Player
-{
-private:
-    int health;
-    int maxHealth;
-    int ragebait;
-    int eloquence;
-
-    std::map<std::string, int> inventory;
-
-    bool hasMegaphone;
-};
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

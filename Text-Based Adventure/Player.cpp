@@ -8,12 +8,12 @@ Player::Player()
     eloquence = 50;
     hasMegaphone = false;
 
-    // Starting Inventory
+    // starting inventory
     inventory["Cough Syrup"] = 2;
     inventory["Cortisol Pills"] = 1; 
 }
 
-// 4. User Interface: The HUD Display
+// ui and hud
 void Player::printHUD() const 
 {
     std::cout << "\n=========================================\n";
@@ -22,7 +22,7 @@ void Player::printHUD() const
     std::cout << "Eloquence: [" << eloquence << "] | ";
     std::cout << "Rage: [" << rage << "]\n";
     std::cout << "-----------------------------------------\n";
-    std::cout << "🎒 INVENTORY: \n";
+    std::cout << "INVENTORY: \n";
 
     bool hasItems = false;
     for (const auto& item : inventory) 
@@ -64,7 +64,7 @@ void Player::addRage(int amount)
     rage += amount;
 }
 
-// Inventory Management
+// inventory
 void Player::addItem(std::string itemName, int quantity) 
 {
     inventory[itemName] += quantity;
