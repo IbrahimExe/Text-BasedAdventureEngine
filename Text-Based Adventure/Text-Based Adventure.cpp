@@ -1,9 +1,23 @@
 #include <iostream>
+#include <map>
 
 int main()
 {
     std::cout << "Hello World!\n";
 }
+
+class Player
+{
+private:
+    int health;
+    int maxHealth;
+    int ragebait;
+    int eloquence;
+
+    std::map<std::string, int> inventory;
+
+    bool hasMegaphone;
+};
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
