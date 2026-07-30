@@ -25,6 +25,7 @@ void RagebaitGame::start()
     std::cout << "\n[Loot Drop] Salmon dropped a Megaphone and some Cough Syrup!\n";
     player.addItem("Megaphone", 1);
     player.addItem("Cough Syrup", 1);
+    player.addItem("Cortisol Pills", 2);
 
 
     std::cout << "\n--- FINAL BOSS ---\n";
