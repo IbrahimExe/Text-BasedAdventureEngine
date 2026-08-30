@@ -1,6 +1,7 @@
 ﻿#include "Game.h"
 #include <iostream>
 
+// C++
 void RagebaitGame::start() 
 {
     prologue();
